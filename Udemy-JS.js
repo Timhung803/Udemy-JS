@@ -54,3 +54,57 @@ let washingMachine = {
 };
 console.log(washingMachine);
 console.log(washingMachine.control());
+
+// Member Access
+
+var car2 = {
+    make: 'volvo',
+    speed: 160,
+    engine: {
+        size: 2.0,
+        make: 'BMW',
+        fuel: 'petrol',
+        pistons: [{maker: 'bmw'}, {maker: 'bmw2'}
+        ]},
+    drive1: function(){return 'drive';}
+};
+
+console.log(car2.make);
+console.log(car2.speed);
+console.log(car2.engine.size, car2.engine.pistons[1].maker);
+console.log(car2.drive1());
+
+// Computed Member Access
+
+var car3 = {
+    make: 'volvo',
+    speed: 160,
+    engine: {
+        size: 2.0,
+        make: 'BMW',
+        fuel: 'petrol',
+        pistons: [{maker: 'bmw'}, {maker: 'bmw2'}
+        ]},
+    drive1: function(){return 'drive';}
+};
+
+var array = [
+    'string',
+    120,
+    ['embed', 200],
+    {car4: 'ford'},
+    function(){return 'drive';}
+];
+
+console.log(car3.engine.pistons[0]);
+console.log(car3.engine.pistons[1].maker);
+console.log(array[2 + 2 - 1 - 1][0]);
+
+let h = 88;
+var pointer = 'make'
+console.log(array[h / 11 - 8]);
+console.log(car3['engine']['fuel']);
+console.log(car3['engine']['pistons'][1]['maker']);
+console.log(car3['drive1']());
+console.log(car3['en'+'gine']);
+console.log(car3[pointer]);
