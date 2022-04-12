@@ -108,3 +108,53 @@ console.log(car3['engine']['pistons'][1]['maker']);
 console.log(car3['drive1']());
 console.log(car3['en'+'gine']);
 console.log(car3[pointer]);
+
+// Member creation, Assignment & Deletion
+let car5 = {
+    make: 'volvo',
+    speed: 160,
+    engine: {
+        size: 2.0,
+        make:'bmw',
+        fuel: 'petrol',
+        pistons:[
+            {maker: 'bmw'},
+            {maker: 'bmw1'}
+        ]
+    },
+    drive:function(){return 'drive';}
+    };
+
+let array1 = [
+    'string',
+    100,
+    ['embed', 200],
+    {car: 'ford'},
+    function(){return 'drive';}
+];
+
+console.log(car5.make);
+// car5 = 'string1';
+// console.log(car5);
+car5.make += 300;
+console.log(car5.make);
+
+car5['speed'] *= 2;
+console.log(car5.speed);
+
+car5.engine = {newEngine: 'new'};
+console.log(car5.engine.newEngine);
+
+car5.model = 'V88';
+console.log(car5.model);
+
+car5.stop = function(){return 'stop'};
+console.log(car5.stop());
+
+car5.color = 'red';
+console.log(car5.color);
+let deleted = delete car5.color;
+console.log(deleted);
+let deleted1 = delete car5.stop;
+console.log(deleted1);
+console.log(car5);
