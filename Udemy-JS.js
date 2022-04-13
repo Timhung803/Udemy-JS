@@ -158,3 +158,30 @@ console.log(deleted);
 let deleted1 = delete car5.stop;
 console.log(deleted1);
 console.log(car5);
+
+// Array Modification
+
+let array2 = [
+    'string',
+    120,
+    ['embed', 230],
+    {car: 'ford'},
+    function(){return 'drive';}
+];
+
+console.log(array2[0]);
+console.log(array2[1] = 'string');
+console.log(array2[0] += 400);
+console.log(array2[5] = 'newString');
+console.log(array2);
+console.log(array2.length);
+console.log(array2.shift());
+console.log(array2.pop());
+console.log(array2.unshift('test', 888, {}, []));
+console.log(array2);
+array2.push(8888,88888,'testing');
+console.log(array2.length);
+array2.splice(7, 2);
+console.log(array2);
+array2.splice(1, 0, 'spliceTesting');
+console.log(array2);
