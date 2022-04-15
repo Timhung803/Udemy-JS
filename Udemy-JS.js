@@ -252,3 +252,29 @@ function runExpression(){
     );
 }
 runExpression();
+
+// Inferred Global & Scope
+
+let engine2 = {
+    maker: 'Ford',
+    headGasket:{
+        maker:'golf',
+        pots:[
+            'piston1',
+            'piston2'
+        ]
+    }
+};
+
+function runExpression1()
+{
+    let a = 10;
+    function add()
+    {
+        console.log(engine2);
+        console.log(a);
+    }
+    add();
+}
+
+runExpression1();
