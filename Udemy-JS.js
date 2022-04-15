@@ -185,3 +185,70 @@ array2.splice(7, 2);
 console.log(array2);
 array2.splice(1, 0, 'spliceTesting');
 console.log(array2);
+
+// Callable Object
+function name1() {
+    let fullname = 'Tim';
+    function concat(name1){
+        return 'MR.' + name1;
+    }
+    return concat(fullname);
+}
+console.log(name1());
+
+function name2(fullname) {
+    return fullname.firstName + fullname.lastName;
+}
+
+// console.log(name2({firstName: 'Tim', lastName:'H'}));
+function name3(fullname) {
+    return fullname();
+}
+
+console.log(
+    name3(function(){return 'embed';})
+);
+
+// Memory Hoisting
+// console.log(myName1, printName1());
+
+let myName1 = 'tim';
+
+function printName1() {
+    return 'HK'
+}
+
+// Scope & Closures
+// scope = access
+let engine = {
+    maker: 'ford',
+    headGasket:{
+        pots:[
+            'piston1',
+            'piston2'
+        ]
+    }
+};
+
+// function runExpression(){
+//     let a = 10;
+//     function add(){
+//         return a + 90;
+//     }
+//     return add();
+// }
+console.log(engine.headGasket.pots[1]);
+
+// console.log(a); - not working as this is out of the function scope
+
+function runExpression(){
+    let a = 10;
+    function add(b){
+        return a + b;
+    }
+    console.log(
+        add(20),
+        add(90)
+    );
+}
+runExpression();
