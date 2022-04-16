@@ -278,3 +278,42 @@ function runExpression1()
 }
 
 runExpression1();
+
+// This context
+
+console.log(this);
+
+let object = {
+    prop: this,
+    method: function() {return this;}
+};
+
+let array6 = [
+    this, 
+    function(){
+        return this;
+    }
+];
+
+function global(){
+    return this;
+}
+
+global.call (object);
+
+// Constructors
+function User(email, name1, color, score){
+    this.email = email;
+    this.name1 = name1;
+    this.color = color;
+    this.score = score;
+}
+let user1 = new User(10, 20, 'red', 200);
+let user2 = new User(1, 2, 'green', 20);
+let user3 = new User(56, 3, 'pink', 40);
+let user4 = new User(7, 28, 'blue', 300);
+
+console.log(user1);
+console.log(user2);
+console.log(user3);
+console.log(user4);
