@@ -375,5 +375,25 @@ else
 {
     console.log('Say where you are');
 }
-
 // '&&' = AND & '||' = one or another
+
+// For & For in Loop's
+
+// let classRegister = ['Tim', 'Vivi', 'Wendy', 'GG Master'];
+
+// for( let i = 0; i < classRegister.length; i++)
+// {
+//     console.log(classRegister[i]);
+// }
+
+let classRegister = ['Tim', 'Vivi', 'Wendy', 'GG Master'];
+
+for( let i = classRegister.length - 1; i >= 0; i--)
+{
+    console.log(classRegister[i]);
+}
+
+for(let index in classRegister)
+{
+    console.log(classRegister[index]);
+}
