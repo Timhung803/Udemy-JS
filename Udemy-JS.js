@@ -317,3 +317,29 @@ console.log(user1);
 console.log(user2);
 console.log(user3);
 console.log(user4);
+
+// Prototype & constructions
+function Apple(color, weight){
+    this.color = color;
+    this.weight = weight;
+
+}
+
+Apple.prototype = {
+    eat: function(){return this},
+    throw: function(){return 'throw the apple';}
+};
+
+let apple1 = new Apple('red', 99);
+let apple2 = new Apple('green', 109);
+let apple3 = new Apple('yellow', 299);
+
+console.log(Apple.prototype.eat());
+console.log(apple1.eat());
+console.log(apple2.eat());
+console.log(apple3.eat());
+
+console.log(Apple.prototype.throw());
+console.log(apple1.throw());
+console.log(apple2.throw());
+console.log(apple3.throw());
