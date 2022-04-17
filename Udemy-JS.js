@@ -355,4 +355,25 @@ console.log(null !== undefined);
 console.log(10 > 100);
 console.log(10 > 1);
 console.log('helloooo' > 'hello');
-console.log(10 >= 10);
+console.log(10 >= 10); // >= greater than and equal to
+
+// If Statements
+
+let carsLeft = 1,
+    carsRight = 0,
+    greenLight = 'no';
+
+if(greenLight === 'yes') 
+{
+    console.log('Cross the r0ad');
+}
+else if (greenLight === 'yes' && carsLeft === 0 || carsRight === 0) 
+{
+    console.log('All clear! Cross the road');
+}
+else
+{
+    console.log('Say where you are');
+}
+
+// '&&' = AND & '||' = one or another
