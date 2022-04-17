@@ -397,3 +397,33 @@ for(let index in classRegister)
 {
     console.log(classRegister[index]);
 }
+
+// Let ES6
+
+// var symbolName = 'valy=ue refernce in memory';
+// let letSymbol = 'scoprd value';
+// const symName = 'constant value in memory';
+
+// if(true)
+// {
+//     var symbolName = 'value refernce in memory';// changing the global object as well
+//     let letSymbol = 'scoprd value'; // only within the object (block{})
+//     const symName = 'constant value in memory';// can't change
+// }
+
+// for(var i = 0; i < 5; i++)
+// {
+//     var symbolName = 'value refernce in memory';
+//     let letSymbol = 'scoprd value';
+//     const symName = 'constant value in memory';
+// }
+
+function check()
+{
+    var symbolName = 'value refernce in memory';
+    let letSymbol = 'scoprd value';
+    const symName = 'constant value in memory';
+}
+// var is still applied within function scope.
+
+console.log(symbolName);
