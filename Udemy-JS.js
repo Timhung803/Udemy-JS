@@ -343,3 +343,16 @@ console.log(Apple.prototype.throw());
 console.log(apple1.throw());
 console.log(apple2.throw());
 console.log(apple3.throw());
+
+// comparison Operation
+console.log(10 == 10);
+console.log(null == undefined);
+console.log(10 === '10');
+console.log(null === undefined);
+// != = not equal
+console.log(10 !== '10');
+console.log(null !== undefined);
+console.log(10 > 100);
+console.log(10 > 1);
+console.log('helloooo' > 'hello');
+console.log(10 >= 10);
