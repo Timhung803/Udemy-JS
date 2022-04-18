@@ -441,3 +441,19 @@ console.log(document.querySelectorAll('.pClass'));
 console.log(document.querySelectorAll('#hello.pClass'));
 console.log(document.querySelectorAll('p[data-content="123"], body > h1.pClass > span'));
 
+// Changeing Element's Contents
+console.log(document.getElementById('hello'));
+console.dir(document.getElementById('hello'));
+
+// document.getElementById('hello').innerText = 'New New New';
+// document.getElementById('hello').innerText += 'old old old';
+
+var pHello = document.getElementById('hello');
+pHello.innerText = 'Buy New or';
+pHello.innerText += ' GiveU Old';
+pHello.innerHTML += ' which one <span>You want</span>';
+pHello.outerHTML = '<h2 id=\"hello\" class=\"pClass\">Buy New or GiveU Old which one <span>You want</span></h2>'
+
+var spanh1 = document.querySelectorAll('h1 span')[0];
+spanh1.innerHTML = 'new text here!!';
+
