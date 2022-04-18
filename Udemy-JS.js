@@ -426,4 +426,18 @@ function check()
 }
 // var is still applied within function scope.
 
-console.log(symbolName);
+// console.log(symbolName);
+
+// Understanding the Document Object Model 
+console.log(document.childNodes[1].childNodes[2]);
+
+// Target DOM Elements 
+console.log(document.getElementsByTagName('p'));
+console.log(document.getElementsByTagName('h1'));
+console.log(document.getElementById('hello'));
+console.log(document.getElementsByClassName('pClass'));
+console.log(document.querySelectorAll('#hello'));
+console.log(document.querySelectorAll('.pClass'));
+console.log(document.querySelectorAll('#hello.pClass'));
+console.log(document.querySelectorAll('p[data-content="123"], body > h1.pClass > span'));
+
