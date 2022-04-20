@@ -457,3 +457,48 @@ pHello.outerHTML = '<h2 id=\"hello\" class=\"pClass\">Buy New or GiveU Old which
 var spanh1 = document.querySelectorAll('h1 span')[0];
 spanh1.innerHTML = 'new text here!!';
 
+// Changing Element Style 
+
+let el = document.getElementById('style');
+console.dir(el);
+
+el.style.background = 'red';
+// el.style.color = 'white';
+// el.style.width = '200px';
+// el.style.height = '200px';
+
+// el.style.cssText = "background: blue; color: white; width: 200px;"; 
+// el.style.cssText += "height: 200px;";
+
+console.log(getComputedStyle(el));
+
+// Event Handler
+
+console.log(document.getElementsByName('Cars'));
+
+let select = document.getElementsByName('Cars')[0];
+
+select.onclick = function(event){
+    console.log(event);
+};
+
+select.onclick = function(event){
+    console.log('overrided');
+};
+function clickCallBack(event){
+    console.log('clicked by add event listener');
+}
+
+select.addEventListener('click', clickCallBack);
+
+// select.removeEventListener('click', clickCallBack);
+
+// select.addEventListener('click', function(event){
+//     console.log('clicked by add event listener');
+// });
+
+
+// select.addEventListener('click', function(event){
+//     console.log('clicked by add event listener2');
+// });
+
