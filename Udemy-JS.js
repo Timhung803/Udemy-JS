@@ -502,3 +502,18 @@ select.addEventListener('click', clickCallBack);
 //     console.log('clicked by add event listener2');
 // });
 
+// Create & appendChild & insertBefore method's
+
+let element = document.createElement('div');
+
+element.style.cssText = "width:200px; height:20px; background:blue;";
+
+element.onclick = function(event){
+    alert('hello');
+};
+
+// document.body.appendChild(element);
+
+let target = document.getElementById('yellow');
+
+document.body.insertBefore(element, target);
